@@ -74,7 +74,7 @@ class _QuizScreen3State extends State<QuizScreen3> {
               ),
               SizedBox(height: mediaHeight(context, 0.2)),
               Text(
-                "10.252.42.122는 host ip이다.",
+                "10.252.42.122는 공인ip이다.",
                 style: TextStyle(
                   fontWeight: FontWeight.w500,
                   fontSize: mediaHeight(context, 0.28),
