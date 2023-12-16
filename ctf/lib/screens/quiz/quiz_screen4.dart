@@ -75,7 +75,7 @@ class _QuizScreen4State extends State<QuizScreen4> {
               ),
               SizedBox(height: mediaHeight(context, 0.2)),
               Text(
-                "상혁이는 주은이보다 머리가 길다.",
+                "리눅스 메모리에서 데이터는 동적할당되는 배열이 저장된다",
                 style: TextStyle(
                   fontWeight: FontWeight.w500,
                   fontSize: mediaHeight(context, 0.28),
@@ -149,7 +149,7 @@ class _QuizScreen4State extends State<QuizScreen4> {
         GestureDetector(
           onTap: () => changeOX(determine: true),
           onDoubleTap:
-              oSelected ? null : () => answerOX(answer: true, determine: true),
+              oSelected ? null : () => answerOX(answer: false, determine: true),
           child: Image.asset(
             'asset/$selectO.png',
             height: mediaHeight(context, 1.8),
@@ -164,9 +164,8 @@ class _QuizScreen4State extends State<QuizScreen4> {
         SizedBox(width: mediaWidth(context, 0.3)),
         GestureDetector(
           onTap: () => changeOX(determine: false),
-          onDoubleTap: xSelected
-              ? null
-              : () => answerOX(answer: false, determine: false),
+          onDoubleTap:
+              xSelected ? null : () => answerOX(answer: true, determine: false),
           child: Image.asset(
             'asset/$selectX.png',
             height: mediaHeight(context, 1.8),

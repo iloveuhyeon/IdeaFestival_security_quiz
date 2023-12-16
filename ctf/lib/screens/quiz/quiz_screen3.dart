@@ -148,7 +148,7 @@ class _QuizScreen3State extends State<QuizScreen3> {
         GestureDetector(
           onTap: () => changeOX(determine: true),
           onDoubleTap:
-              oSelected ? null : () => answerOX(answer: true, determine: true),
+              oSelected ? null : () => answerOX(answer: false, determine: true),
           child: Image.asset(
             'asset/$selectO.png',
             height: mediaHeight(context, 1.8),
@@ -163,9 +163,8 @@ class _QuizScreen3State extends State<QuizScreen3> {
         SizedBox(width: mediaWidth(context, 0.3)),
         GestureDetector(
           onTap: () => changeOX(determine: false),
-          onDoubleTap: xSelected
-              ? null
-              : () => answerOX(answer: false, determine: false),
+          onDoubleTap:
+              xSelected ? null : () => answerOX(answer: true, determine: false),
           child: Image.asset(
             'asset/$selectX.png',
             height: mediaHeight(context, 1.8),

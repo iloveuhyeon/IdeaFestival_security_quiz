@@ -73,7 +73,7 @@ class _QuizScreen5State extends State<QuizScreen5> {
               ),
               SizedBox(height: mediaHeight(context, 0.2)),
               Text(
-                "현이는 올해의 부회장이다.",
+                "까나리는 DDoS을 막기위한 방법이 아니다.",
                 style: TextStyle(
                   fontWeight: FontWeight.w500,
                   fontSize: mediaHeight(context, 0.28),
