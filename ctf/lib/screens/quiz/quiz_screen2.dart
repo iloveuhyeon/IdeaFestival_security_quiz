@@ -75,7 +75,7 @@ class _QuizScreen2State extends State<QuizScreen2> {
               ),
               SizedBox(height: mediaHeight(context, 0.2)),
               Text(
-                "4계층은 네트워크계층이다",
+                "4계층은 네트워크계층이다.",
                 style: TextStyle(
                   fontWeight: FontWeight.w500,
                   fontSize: mediaHeight(context, 0.28),

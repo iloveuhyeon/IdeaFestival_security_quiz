@@ -73,7 +73,7 @@ class _QuizScreen5State extends State<QuizScreen5> {
               ),
               SizedBox(height: mediaHeight(context, 0.2)),
               Text(
-                "까나리는 DDoS을 막기위한 방법이 아니다.",
+                "카나리(Canary)는 DDoS을 막기위한 방법이 아니다.",
                 style: TextStyle(
                   fontWeight: FontWeight.w500,
                   fontSize: mediaHeight(context, 0.28),

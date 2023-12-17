@@ -75,7 +75,7 @@ class _QuizScreen4State extends State<QuizScreen4> {
               ),
               SizedBox(height: mediaHeight(context, 0.2)),
               Text(
-                "리눅스 메모리에서 데이터는 동적할당되는 배열이 저장된다",
+                "리눅스 메모리에서 데이터는 동적할당되는 배열이 저장된다.",
                 style: TextStyle(
                   fontWeight: FontWeight.w500,
                   fontSize: mediaHeight(context, 0.28),
