@@ -53,7 +53,7 @@ class EndScreen extends StatelessWidget {
                 height: mediaHeight(context, 1),
               ),
               Text(
-                "본인즤 점수는...??",
+                "본인의 점수는...??",
                 style: TextStyle(
                   fontWeight: FontWeight.w600,
                   fontSize: mediaHeight(context, 0.2),
