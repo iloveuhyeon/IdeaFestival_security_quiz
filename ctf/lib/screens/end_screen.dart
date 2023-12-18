@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 late int imageNumber;
 
+// ignore: must_be_immutable
 class EndScreen extends StatelessWidget {
   EndScreen({super.key});
 
