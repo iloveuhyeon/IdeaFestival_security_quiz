@@ -27,13 +27,9 @@ class EndScreen extends StatelessWidget {
       case 3:
         imageNumber = 3;
         break;
-      case 4:
-      case 5:
+      default:
         imageNumber = 5;
         comment = "축하드려요!! 점수를 보여주시면 소정의 상품을 드러요!!";
-        break;
-      default:
-        imageNumber = 0;
         break;
     }
   }

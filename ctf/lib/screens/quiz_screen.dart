@@ -16,7 +16,7 @@ class _QuizScreenState extends State<QuizScreen> {
   bool choice = false;
   bool answerSelect = false;
   static int count = 1;
-  bool? answer = Questions().answer[count];
+  bool? answer = Questions().answer[Questions.myOrder[count - 1]];
 
   double mediaHeight(BuildContext context, double scale) =>
       MediaQuery.of(context).size.height * scale / 10;
@@ -75,7 +75,7 @@ class _QuizScreenState extends State<QuizScreen> {
               ),
               SizedBox(height: mediaHeight(context, 0.2)),
               Text(
-                "${Questions().question[count]}",
+                "${Questions().question[Questions.myOrder[count - 1]]}",
                 style: TextStyle(
                   fontWeight: FontWeight.w500,
                   fontSize: mediaHeight(context, 0.28),
@@ -146,7 +146,7 @@ class _QuizScreenState extends State<QuizScreen> {
               if (choice)
                 InkWell(
                   onTap: () {
-                    if (count > 4) {
+                    if (count == Questions().questionsNum) {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
