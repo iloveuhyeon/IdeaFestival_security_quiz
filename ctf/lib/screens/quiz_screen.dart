@@ -23,14 +23,6 @@ class _QuizScreenState extends State<QuizScreen> {
   double mediaWidth(BuildContext context, double scale) =>
       MediaQuery.of(context).size.width * scale / 10;
 
-  Map<int, String> number = {
-    1: "첫",
-    2: "두",
-    3: "세",
-    4: "네",
-    5: "다섯",
-  };
-
   void onTap(bool select) {
     setState(() {
       if (choice) return;
@@ -74,7 +66,7 @@ class _QuizScreenState extends State<QuizScreen> {
             children: [
               SizedBox(height: mediaHeight(context, 0.5)),
               Text(
-                "${number[count]}번째 문제!!",
+                "$count번 문제!!",
                 style: TextStyle(
                   fontWeight: FontWeight.w600,
                   fontSize: mediaHeight(context, 0.6),
