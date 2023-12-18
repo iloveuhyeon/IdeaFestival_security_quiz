@@ -16,16 +16,24 @@ class EndScreen extends StatelessWidget {
   void determine() {
     switch (count) {
       case 0:
+      case 1:
+      case 2:
+      case 3:
         imageNumber = 1;
         comment = "보안 공부를 조금이라도 해보시는것을 추천해요!!";
         break;
-      case 1:
-        imageNumber = 1;
-        comment = "한개만 더..ㅜㅜ 아쉬워요ㅠㅠ ";
-        break;
-      case 2:
-      case 3:
+      case 4:
+      case 5:
+      case 6:
+      case 7:
         imageNumber = 3;
+        comment = "나쁘지않아요!! 점수를 보여주시면 소정의 상품을 드러요!!";
+        break;
+      case 8:
+      case 9:
+      case 10:
+        imageNumber = 5;
+        comment = "축하드려요!! 점수를 보여주시면 소정의 상품을 드러요!!";
         break;
       default:
         imageNumber = 5;
