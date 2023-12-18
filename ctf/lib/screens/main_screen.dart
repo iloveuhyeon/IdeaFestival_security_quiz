@@ -14,7 +14,6 @@ class MainScreenState extends State<MainScreen> {
       MediaQuery.of(context).size.height * scale / 10;
   double mediaWidth(BuildContext context, double scale) =>
       MediaQuery.of(context).size.width * scale / 10;
-  static int count = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -44,13 +43,10 @@ class MainScreenState extends State<MainScreen> {
               ),
               GestureDetector(
                 onTap: () {
-                  MainScreenState.count++;
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => QuizScreen(
-                                num: count,
-                              )));
+                          builder: (context) => const QuizScreen()));
                 },
                 child: Icon(
                   Icons.play_circle_outline_rounded,

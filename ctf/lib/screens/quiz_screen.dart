@@ -1,10 +1,9 @@
-import 'package:ctf/questions/questions.dart';
+import 'package:ctf/functions/questions.dart';
 import 'package:ctf/screens/end_screen.dart';
-import 'package:ctf/screens/main_screen.dart';
 import 'package:flutter/material.dart';
 
 class QuizScreen extends StatefulWidget {
-  const QuizScreen({Key? key, required int num}) : super(key: key);
+  const QuizScreen({Key? key}) : super(key: key);
 
   @override
   State<QuizScreen> createState() => _QuizScreenState();
@@ -16,7 +15,8 @@ class _QuizScreenState extends State<QuizScreen> {
   bool tapOne = false;
   bool choice = false;
   bool answerSelect = false;
-  bool? answer = Questions().answer[MainScreenState.count];
+  static int count = 1;
+  bool? answer = Questions().answer[count];
 
   double mediaHeight(BuildContext context, double scale) =>
       MediaQuery.of(context).size.height * scale / 10;
@@ -74,7 +74,7 @@ class _QuizScreenState extends State<QuizScreen> {
             children: [
               SizedBox(height: mediaHeight(context, 0.5)),
               Text(
-                "${number[MainScreenState.count]}번째 문제!!",
+                "${number[count]}번째 문제!!",
                 style: TextStyle(
                   fontWeight: FontWeight.w600,
                   fontSize: mediaHeight(context, 0.6),
@@ -83,7 +83,7 @@ class _QuizScreenState extends State<QuizScreen> {
               ),
               SizedBox(height: mediaHeight(context, 0.2)),
               Text(
-                "${Questions().question[MainScreenState.count]}",
+                "${Questions().question[count]}",
                 style: TextStyle(
                   fontWeight: FontWeight.w500,
                   fontSize: mediaHeight(context, 0.28),
@@ -154,8 +154,7 @@ class _QuizScreenState extends State<QuizScreen> {
               if (choice)
                 InkWell(
                   onTap: () {
-                    MainScreenState.count++;
-                    if (MainScreenState.count > 5) {
+                    if (count > 4) {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
@@ -163,12 +162,11 @@ class _QuizScreenState extends State<QuizScreen> {
                         ),
                       );
                     } else {
+                      count++;
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => QuizScreen(
-                            num: MainScreenState.count,
-                          ),
+                          builder: (context) => const QuizScreen(),
                         ),
                       );
                     }
