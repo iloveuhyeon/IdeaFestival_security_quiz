@@ -24,6 +24,10 @@ class Questions {
     7: false,
   };
 
+  Questions() {
+    Order();
+  }
+  // ignore: non_constant_identifier_names
   void Order() {
     questionsNum = question.length; // 만약 문제의 갯수를 조정하고싶으면 이것을 지우세요
     while (uniqueNumbers.length < questionsNum) {

@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    Questions().Order();
+    Questions();
     return MaterialApp(
       theme: ThemeData(
         useMaterial3: false,
