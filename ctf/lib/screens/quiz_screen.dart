@@ -18,10 +18,10 @@ class _QuizScreenState extends State<QuizScreen> {
   static int count = 1;
   bool? answer = Questions().answer[Questions.myOrder[count - 1]];
 
-  double mediaHeight(BuildContext context, double scale) =>
-      MediaQuery.of(context).size.height * scale / 10;
-  double mediaWidth(BuildContext context, double scale) =>
-      MediaQuery.of(context).size.width * scale / 10;
+  double mediaHeight(BuildContext context, double value) =>
+      MediaQuery.of(context).size.height * value / 10;
+  double mediaWidth(BuildContext context, double value) =>
+      MediaQuery.of(context).size.width * value / 10;
 
   void onTap(bool select) {
     setState(() {
@@ -55,9 +55,10 @@ class _QuizScreenState extends State<QuizScreen> {
     return Scaffold(
       backgroundColor: Colors.yellow,
       body: Padding(
-        padding: EdgeInsets.symmetric(
-          vertical: mediaHeight(context, 0.8),
-          horizontal: mediaWidth(context, 0.5),
+        padding: EdgeInsets.only(
+          top: mediaHeight(context, 0.8),
+          left: mediaWidth(context, 0.5),
+          right: mediaWidth(context, 0.5),
         ),
         child: SizedBox(
           width: double.infinity,
