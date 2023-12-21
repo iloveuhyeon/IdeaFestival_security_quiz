@@ -69,10 +69,10 @@ class _QuizScreenState extends State<QuizScreen> {
               Text(
                 "$count번 문제!!",
                 style: TextStyle(
-                  fontWeight: FontWeight.w600,
-                  fontSize: mediaHeight(context, 0.6),
-                  fontStyle: FontStyle.italic,
-                ),
+                    fontWeight: FontWeight.w600,
+                    fontSize: mediaHeight(context, 0.6),
+                    fontStyle: FontStyle.italic,
+                    fontFamily: 'KCC'),
               ),
               SizedBox(height: mediaHeight(context, 0.2)),
               Text(
@@ -80,6 +80,7 @@ class _QuizScreenState extends State<QuizScreen> {
                 style: TextStyle(
                   fontWeight: FontWeight.w500,
                   fontSize: mediaHeight(context, 0.28),
+                  fontFamily: 'KCC',
                 ),
                 textAlign: TextAlign.center,
               ),
@@ -94,6 +95,7 @@ class _QuizScreenState extends State<QuizScreen> {
                   fontSize: mediaHeight(context, 0.4),
                   color: answerSelect ? Colors.blue : Colors.red,
                   fontWeight: FontWeight.w600,
+                  fontFamily: 'KCC',
                 ),
               ),
               SizedBox(height: mediaHeight(context, 0.2)),
@@ -136,7 +138,7 @@ class _QuizScreenState extends State<QuizScreen> {
               SizedBox(height: mediaHeight(context, 0.3)),
               if (tapOne)
                 Text(
-                  "정답을 선택하시려면 더블탭하세요..!!",
+                  "정답을 선택하시려면 더블 클릭하세요..!!",
                   style: TextStyle(
                     fontWeight: FontWeight.w500,
                     fontSize: mediaHeight(context, 0.2),
@@ -177,6 +179,7 @@ class _QuizScreenState extends State<QuizScreen> {
                         style: TextStyle(
                           fontSize: mediaHeight(context, 0.3),
                           fontWeight: FontWeight.w600,
+                          fontFamily: 'KCC',
                         ),
                       ),
                     ),

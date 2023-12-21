@@ -60,9 +60,9 @@ class MainScreenState extends State<MainScreen> {
               Text(
                 comment3,
                 style: TextStyle(
-                  fontSize: mediaHeight(context, 0.2),
-                  fontWeight: FontWeight.w600,
-                ),
+                    fontSize: mediaHeight(context, 0.3),
+                    fontWeight: FontWeight.w600,
+                    fontFamily: 'KCC'),
               ),
             ],
           ),

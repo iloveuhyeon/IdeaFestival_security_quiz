@@ -61,7 +61,8 @@ class EndScreen extends StatelessWidget {
                 "본인의 점수는...??",
                 style: TextStyle(
                   fontWeight: FontWeight.w600,
-                  fontSize: mediaHeight(context, 0.2),
+                  fontSize: mediaHeight(context, 0.3),
+                  fontFamily: 'KCC',
                 ),
               ),
               SizedBox(
@@ -75,6 +76,7 @@ class EndScreen extends StatelessWidget {
                     "$count",
                     style: TextStyle(
                       fontSize: mediaHeight(context, 1),
+                      fontFamily: 'KCC',
                     ),
                   ),
                   SizedBox(
@@ -83,8 +85,10 @@ class EndScreen extends StatelessWidget {
                   Text(
                     "점",
                     style: TextStyle(
-                        fontSize: mediaHeight(context, 0.2),
-                        fontWeight: FontWeight.w600),
+                      fontSize: mediaHeight(context, 0.3),
+                      fontWeight: FontWeight.w600,
+                      fontFamily: 'KCC',
+                    ),
                   )
                 ],
               ),
@@ -102,8 +106,10 @@ class EndScreen extends StatelessWidget {
                 comment,
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                    fontWeight: FontWeight.w500,
-                    fontSize: mediaHeight(context, 0.2)),
+                  fontWeight: FontWeight.w500,
+                  fontSize: mediaHeight(context, 0.3),
+                  fontFamily: 'KCC',
+                ),
               ),
             ],
           ),
