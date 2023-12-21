@@ -31,13 +31,12 @@ class EndScreen extends StatelessWidget {
         break;
       case 8:
       case 9:
-      case 10:
         imageNumber = 5;
         comment = "축하드려요!! 점수를 보여주시면 소정의 상품을 드러요!!";
         break;
       default:
         imageNumber = 5;
-        comment = "축하드려요!! 점수를 보여주시면 소정의 상품을 드러요!!";
+        comment = "와우!! 사이버보안에 가입해 보시는게 어떨까요?? 점수를 보여주시면 소정의 상품을 드려요  ";
         break;
     }
   }
@@ -52,66 +51,71 @@ class EndScreen extends StatelessWidget {
             vertical: mediaHeight(context, 1),
             horizontal: mediaWidth(context, 1)),
         child: Center(
-          child: Column(
-            children: [
-              SizedBox(
-                height: mediaHeight(context, 1),
-              ),
-              Text(
-                "본인의 점수는...??",
-                style: TextStyle(
-                  fontWeight: FontWeight.w600,
-                  fontSize: mediaHeight(context, 0.3),
-                  fontFamily: 'KCC',
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                SizedBox(
+                  height: mediaHeight(context, 1),
                 ),
-              ),
-              SizedBox(
-                height: mediaHeight(context, 0.3),
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Text(
-                    "$count",
-                    style: TextStyle(
-                      fontSize: mediaHeight(context, 1),
-                      fontFamily: 'KCC',
-                    ),
+                Text(
+                  "본인의 점수는...??",
+                  style: TextStyle(
+                    fontWeight: FontWeight.w600,
+                    fontSize: mediaHeight(context, 0.3),
+                    fontFamily: 'KCC',
                   ),
-                  SizedBox(
-                    width: mediaHeight(context, 0.05),
-                  ),
-                  Text(
-                    "점",
-                    style: TextStyle(
-                      fontSize: mediaHeight(context, 0.3),
-                      fontWeight: FontWeight.w600,
-                      fontFamily: 'KCC',
-                    ),
-                  )
-                ],
-              ),
-              SizedBox(
-                height: mediaHeight(context, 0.8),
-              ),
-              Image.asset(
-                "asset/$imageNumber.png",
-                height: mediaHeight(context, 3),
-              ),
-              SizedBox(
-                height: mediaHeight(context, 0.1),
-              ),
-              Text(
-                comment,
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontWeight: FontWeight.w500,
-                  fontSize: mediaHeight(context, 0.3),
-                  fontFamily: 'KCC',
                 ),
-              ),
-            ],
+                SizedBox(
+                  height: mediaHeight(context, 0.3),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(
+                      "$count",
+                      style: TextStyle(
+                        fontSize: mediaHeight(context, 1),
+                        fontFamily: 'KCC',
+                      ),
+                    ),
+                    SizedBox(
+                      width: mediaHeight(context, 0.05),
+                    ),
+                    Text(
+                      "점",
+                      style: TextStyle(
+                        fontSize: mediaHeight(context, 0.3),
+                        fontWeight: FontWeight.w600,
+                        fontFamily: 'KCC',
+                      ),
+                    )
+                  ],
+                ),
+                SizedBox(
+                  height: mediaHeight(context, 0.8),
+                ),
+                Image.asset(
+                  "asset/$imageNumber.png",
+                  height: mediaHeight(context, 3),
+                ),
+                SizedBox(
+                  height: mediaHeight(context, 0.1),
+                ),
+                Text(
+                  comment,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontWeight: FontWeight.w500,
+                    fontSize: mediaHeight(context, 0.3),
+                    fontFamily: 'KCC',
+                  ),
+                ),
+                SizedBox(
+                  height: mediaHeight(context, 1),
+                ),
+              ],
+            ),
           ),
         ),
       ),
